@@ -55,10 +55,12 @@ def multiplicarImpares(n):
         if x%2!=0:
             print("Dígito impar: ",x)
             multi=multi*x
-        else:
+            print("Multiplicación: ",multi)
+        if x%2==0:
             par=0*x
+            print("0")
         n=n//10
-    return multi
+    return ""
 #valores de las posiciones impares
 #4
 def sacarValorPosicionesImpares(n):
