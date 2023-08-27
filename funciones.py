@@ -20,7 +20,6 @@ def sacarPares(n):
             print("Dígito impar.")
         n=n//10
     return ""
-
 #numero mas grande de la cifra
 #2
 def calcularMasgrande(n):
@@ -39,7 +38,6 @@ def calcularMasgrande(n):
             menor=x
         n=n//10
     return print(mayor)
-
 #multiplicar numeros impares
 #3
 def multiplicarImpares(n):
