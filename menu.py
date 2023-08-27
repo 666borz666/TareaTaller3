@@ -1,6 +1,6 @@
 #Elaborado por Daniel Campos
 #Creacion 26-08-2023 3:00 pm
-#Ultima mod 27-08-2023 
+#Ultima mod 27-08-2023 9:17 am
 #Version 3.10.6
 
 from funciones import *
@@ -11,12 +11,13 @@ def sacarParesAux(n):
     E: Número n
     S: Función seleccionada
     """
-    if isinstance(n ,int)==False:
-         return "Debe ingresar únicamente números."
-    elif n==0:
-        return "Debe ingresar números diferentes de 0."
-    else:
-        return sacarPares(n)
+    if isinstance(n,int)==True:
+        sacarPares(n)
+        if n<=0:
+            return "El número debe ser diferente de cero."
+    else: 
+        return "Debe ingresar sólo números."
+    return ""
     
 def opcionSacarPares(n):
     """
@@ -24,10 +25,13 @@ def opcionSacarPares(n):
     E: Número n
     S: Dígitos del número n que son pares
     """
-    print("Dígitos pares de un número.")
-    n=int(input("Digite un número diferente de 0: "))
-    print(sacarParesAux(n))
-    
+    while True:
+        try:
+            print("Dígitos pares de un número.")
+            n=int(input('Digite un numero entero positivo:'))
+            return  print(sacarParesAux(n))
+        except:
+            return print("Debe ingresar un número, no ingrese caracteres diferentes de números.")   
  #2   
 def calcularMasgrandeAux(n):
     """
@@ -35,10 +39,13 @@ def calcularMasgrandeAux(n):
     E: Número n
     S: Función seleccionada
     """
-    if type(n)!=int:
-        return "Debe ingresar únicamente números."
-    else:
-        return calcularMasgrande(n)
+    if isinstance(n,int)==True:
+        calcularMasgrande(n)
+        if n<=0:
+            return "El número debe ser diferente de cero."
+    else: 
+        return "Debe ingresar sólo números."
+    return ""
     
 def opcionCalcularMasgrande(n):
     """
@@ -46,10 +53,13 @@ def opcionCalcularMasgrande(n):
     E: Número n
     S: Cifra del número n más grande
     """
-    print("Dígitos más grande de un número.")
-    n=int(input('Digite un numero entero positivo:'))
-    print(calcularMasgrandeAux(n))
-    
+    while True:
+        try:
+            print("Dígitos más grande de un número.")
+            n=int(input('Digite un numero entero positivo: '))
+            return print(calcularMasgrandeAux(n))
+        except:
+            return print("Debe ingresar un número, no ingrese caracteres diferentes de números.")   
 #3
 def multiplicarImparesAux(n):
     """
@@ -57,12 +67,13 @@ def multiplicarImparesAux(n):
     E: Número n
     S: Función seleccionada
     """
-    if type(n)!=int:
-         return "Debe ingresar únicamente números."
-    elif n<=0:
-        return "Debe ingresar números mayores a 0."
-    else:
-        return multiplicarImpares(n)
+    if isinstance(n,int)==True:
+        multiplicarImpares(n)
+        if n<=0:
+            return "El número debe ser diferente de cero."
+    else: 
+        return "Debe ingresar sólo números."
+    return ""
     
 def opcionMultiplicarImpares(n):
     """
@@ -70,9 +81,13 @@ def opcionMultiplicarImpares(n):
     E: Numero n
     S: Resultado de la múltiplicacion de los dígitos impares del número n
     """
-    print("Multiplicar dígitos impares de un número.")
-    n=int(input('Digite un numero entero positivo:'))
-    print(multiplicarImparesAux(n))
+    while True:
+        try:
+            print("Multiplicar dígitos impares de un número.")
+            n=int(input('Digite un numero entero positivo: '))
+            return print(multiplicarImparesAux(n))
+        except:
+            return print("Debe ingresar un número, no ingrese caracteres diferentes de números.")    
     
 #4
 def sacarValorPosicionesImparesAux(n):
@@ -98,10 +113,11 @@ def opcionSacarValorPosicionesImpares(n):
     print("Dígitos en las posiciones impares de un número")
     while True:
         try:
+            print("Mostrar los dígitos en las posiciones impares.")
             n=int(input('Digite un numero entero positivo: '))
             return print(sacarValorPosicionesImparesAux(n))
         except:
-            return print("Debe ingresar un número, no letras.")
+            return print("Debe ingresar un número, no ingrese caracteres diferentes de números.")
     return ""
     
     

@@ -1,6 +1,6 @@
 #Elaborado por Daniel Campos
 #Creacion 26-08-2023 3:00 pm
-#Ultima mod 27-08-2023 
+#Ultima mod 27-08-2023 9:17am
 #Version 3.10.6
 
 #definicion de funciones
@@ -38,7 +38,7 @@ def calcularMasgrande(n):
         else:
             menor=x
         n=n//10
-    return mayor
+    return print(mayor)
 
 #multiplicar numeros impares
 #3
@@ -72,10 +72,10 @@ def sacarValorPosicionesImpares(n):
     i=0
     while n>0:
         x=int(n%10)
-        if i%2==0:
+        if i%2!=0:
             print(x)
         else:
-            print("")
+            print("\n","")
         i+=1
         n=n//10
     return ""
