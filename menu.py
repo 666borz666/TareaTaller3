@@ -11,13 +11,13 @@ def sacarParesAux(n):
     E: Número n
     S: Función seleccionada
     """
-    if isinstance(n, str)==True:
-        print("Debe ingresar únicamente números.")
+    if type(n)!=int:
+         return "Debe ingresar únicamente números."
     elif n==0:
-        print("Debe ingresar números diferentes de 0.")
+        return "Debe ingresar números diferentes de 0."
     else:
         return sacarPares(n)
-
+    
 def opcionSacarPares(n):
     """
     F: Entrada y salida de datos de la funcion sacar pares
@@ -25,9 +25,21 @@ def opcionSacarPares(n):
     S: Dígitos del número n que son pares
     """
     print("Dígitos pares de un número.")
-    n=int(input("Digite un número diferente de 0: "))
-    print(sacarPares(n))
+    n=input("Digite un número diferente de 0: ")
+    print(sacarParesAux(n))
+    
  #2   
+def calcularMasgrandeAux(n):
+    """
+    F: Revisa que los datos de entrada sean los correctos
+    E: Número n
+    S: Función seleccionada
+    """
+    if type(n)!=int:
+        return "Debe ingresar únicamente números."
+    else:
+        return calcularMasgrande(n)
+    
 def opcionCalcularMasgrande(n):
     """
     F: Entrada y salida de datos de la función calcular más grande
@@ -35,17 +47,23 @@ def opcionCalcularMasgrande(n):
     S: Cifra del número n más grande
     """
     print("Dígitos más grande de un número.")
-    n=int(input('Digite un numero entero positivo:'))
-    print(calcularMasgrande(n))
+    n=input('Digite un numero entero positivo:')
+    print(calcularMasgrandeAux(n))
     
-def calcularMasgrandeAux(n):
+#3
+def multiplicarImparesAux(n):
     """
     F: Revisa que los datos de entrada sean los correctos
     E: Número n
     S: Función seleccionada
     """
-    return 
-#3
+    if type(n)!=int:
+         return "Debe ingresar únicamente números."
+    elif n==0:
+        return "Debe ingresar números diferentes de 0."
+    else:
+        return multiplicarImpares(n)
+    
 def opcionMultiplicarImpares(n):
     """
     F: Entrada y salida de datos de la función multiplicar impares
@@ -53,17 +71,23 @@ def opcionMultiplicarImpares(n):
     S: Resultado de la múltiplicacion de los dígitos impares del número n
     """
     print("Multiplicar dígitos impares de un número.")
-    n=int(input('Digite un numero entero positivo:'))
-    print(multiplicarImpares(n))
+    n=input('Digite un numero entero positivo:')
+    print(multiplicarImparesAux(n))
     
-def multiplicarImparesAux(n):
+#4
+def sacarValorPosicionesImparesAux(n):
     """
     F: Revisa que los datos de entrada sean los correctos
     E: Número n
     S: Función seleccionada
     """
-    return
-#4
+    if type(n)!=int:
+        return "Debe ingresar únicamente números."
+    elif n==0:
+        return "Debe ingresar números diferentes de 0."
+    else:
+        return sacarValorPosicionesImpares(n)
+    
 def opcionSacarValorPosicionesImpares(n):
     """
     F: Entrada y salida de datos de la función multiplicar impares
@@ -71,17 +95,9 @@ def opcionSacarValorPosicionesImpares(n):
     S: Dígitos en las posiciones impares
     """
     print("Dígitos en las posiciones impares de un número")
-    n=int(input('Digite un numero entero positivo:'))
-    print(sacarValorPosicionesImpares(n))
+    n=input('Digite un numero entero positivo:')
+    print(sacarValorPosicionesImparesAux(n))
     
-def sacarValorPosicionesImparesAux(n):
-    """
-    F: Revisa que los datos de entrada sean los correctos
-    E: Número n
-    S: Función seleccionada
-    """
-    return
-
 #menu
 def menu():
     """

@@ -50,12 +50,11 @@ def multiplicarImpares(n):
     """
     while n>0:
         x=int(n%10)
-        if x!=0:
-            multi=0
-            multi=x*x
-        n//10
-    return multi
-
+        res=x
+        if x%2!=0:
+            mult=(res*x)
+        n=n//10
+    return mult
 #valores de las posiciones impares
 #4
 def sacarValorPosicionesImpares(n):
