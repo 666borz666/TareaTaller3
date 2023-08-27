@@ -1,6 +1,6 @@
 #Elaborado por Daniel Campos
 #Creacion 26-08-2023 3:00 pm
-#Ultima mod 27-08-2023 9:17am
+#Ultima mod 27-08-2023 9:17 am
 #Version 3.10.6
 
 #definicion de funciones
