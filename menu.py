@@ -11,7 +11,7 @@ def sacarParesAux(n):
     E: Número n
     S: Función seleccionada
     """
-    if type(n)!=int:
+    if isinstance(n ,int)==False:
          return "Debe ingresar únicamente números."
     elif n==0:
         return "Debe ingresar números diferentes de 0."
@@ -25,7 +25,7 @@ def opcionSacarPares(n):
     S: Dígitos del número n que son pares
     """
     print("Dígitos pares de un número.")
-    n=input("Digite un número diferente de 0: ")
+    n=int(input("Digite un número diferente de 0: "))
     print(sacarParesAux(n))
     
  #2   
@@ -47,7 +47,7 @@ def opcionCalcularMasgrande(n):
     S: Cifra del número n más grande
     """
     print("Dígitos más grande de un número.")
-    n=input('Digite un numero entero positivo:')
+    n=int(input('Digite un numero entero positivo:'))
     print(calcularMasgrandeAux(n))
     
 #3
@@ -59,8 +59,8 @@ def multiplicarImparesAux(n):
     """
     if type(n)!=int:
          return "Debe ingresar únicamente números."
-    elif n==0:
-        return "Debe ingresar números diferentes de 0."
+    elif n<=0:
+        return "Debe ingresar números mayores a 0."
     else:
         return multiplicarImpares(n)
     
@@ -71,7 +71,7 @@ def opcionMultiplicarImpares(n):
     S: Resultado de la múltiplicacion de los dígitos impares del número n
     """
     print("Multiplicar dígitos impares de un número.")
-    n=input('Digite un numero entero positivo:')
+    n=int(input('Digite un numero entero positivo:'))
     print(multiplicarImparesAux(n))
     
 #4
@@ -95,7 +95,7 @@ def opcionSacarValorPosicionesImpares(n):
     S: Dígitos en las posiciones impares
     """
     print("Dígitos en las posiciones impares de un número")
-    n=input('Digite un numero entero positivo:')
+    n=int(input('Digite un numero entero positivo:'))
     print(sacarValorPosicionesImparesAux(n))
     
 #menu

@@ -48,13 +48,17 @@ def multiplicarImpares(n):
     E: Numero n
     S: Resultado de la múltiplicacion de los dígitos impares del número n
     """
+    multi=1
+    par=0
     while n>0:
         x=int(n%10)
-        res=x
         if x%2!=0:
-            mult=(res*x)
+            print("Dígito impar: ",x)
+            multi=multi*x
+        else:
+            par=0*x
         n=n//10
-    return mult
+    return multi
 #valores de las posiciones impares
 #4
 def sacarValorPosicionesImpares(n):
