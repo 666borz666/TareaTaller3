@@ -134,20 +134,36 @@ def menu():
     print ("3. Multiplicar dígitos impares")
     print ("4. Dígitos en posiciones impares")
     print ("0. Terminar")
-    opcion = int (input ("Escoja una opción: "))
-    if opcion >=0 and opcion <=4:
-        if opcion == 1:
-            opcionSacarPares(n)
-        elif opcion == 2 :
-            opcionCalcularMasgrande(n)
-        elif opcion == 3:
-            opcionMultiplicarImpares(n)
-        elif opcion == 4:
-            opcionSacarValorPosicionesImpares(n)
-        else:
-            return
-    else:
-        print ("Opción inválida")
+    while True:
+        try:
+            opcion = int (input ("Escoja una opción: "))
+            if opcion >=0 and opcion <=4:
+                if opcion == 1:
+                    opcionSacarPares(n)
+                elif opcion == 2 :
+                    opcionCalcularMasgrande(n)
+                elif opcion == 3:
+                    opcionMultiplicarImpares(n)
+                elif opcion == 4:
+                    opcionSacarValorPosicionesImpares(n)
+                else:
+                    return
+            else:
+                return print ("Opción inválida")
+        except:
+            return print("Debe ingresar un número, no ingrese caracteres diferentes de números.")
+    
+def menuAux(n):
+    """
+    F: Revisa que los datos de entrada sean los correctos
+    E: Opción del menú seleccionada
+    S: Función seleccionada
+    """
+    if isinstance(n,int)==True:
+        menu(n)
+    else: 
+        return "Debe ingresar sólo números."
+    return ""
         
 #programa principal
 menu()
