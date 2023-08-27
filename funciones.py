@@ -1,6 +1,6 @@
 #Elaborado por Daniel Campos
 #Creacion 26-08-2023 3:00 pm
-#Ultima mod 26-08-2023 
+#Ultima mod 27-08-2023 
 #Version 3.10.6
 
 #definicion de funciones
@@ -17,7 +17,7 @@ def sacarPares(n):
         if x%2==0:
             print("Dígito par: ",x)
         else:
-            print("Dígito impar:", x)
+            print("Dígito impar.")
         n=n//10
     return ""
 

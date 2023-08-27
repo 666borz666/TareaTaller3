@@ -1,6 +1,6 @@
 #Elaborado por Daniel Campos
 #Creacion 26-08-2023 3:00 pm
-#Ultima mod 26-08-2023 
+#Ultima mod 27-08-2023 
 #Version 3.10.6
 
 from funciones import *
@@ -81,12 +81,13 @@ def sacarValorPosicionesImparesAux(n):
     E: Número n
     S: Función seleccionada
     """
-    if type(n)!=int:
-        return "Debe ingresar únicamente números."
-    elif n==0:
-        return "Debe ingresar números diferentes de 0."
-    else:
-        return sacarValorPosicionesImpares(n)
+    if isinstance(n,int)==True:
+        sacarValorPosicionesImpares(n)
+        if n<=0:
+            return "El número debe ser diferente de cero."
+    else: 
+        return "Debe ingresar sólo números."
+    return ""
     
 def opcionSacarValorPosicionesImpares(n):
     """
@@ -95,8 +96,14 @@ def opcionSacarValorPosicionesImpares(n):
     S: Dígitos en las posiciones impares
     """
     print("Dígitos en las posiciones impares de un número")
-    n=int(input('Digite un numero entero positivo:'))
-    print(sacarValorPosicionesImparesAux(n))
+    while True:
+        try:
+            n=int(input('Digite un numero entero positivo: '))
+            return print(sacarValorPosicionesImparesAux(n))
+        except:
+            return print("Debe ingresar un número, no letras.")
+    return ""
+    
     
 #menu
 def menu():
